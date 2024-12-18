@@ -4,15 +4,204 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Nantipart's Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        .container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 0;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 50%, #f4f4f9 50%),
+                url('img/bg.jpg') center/cover no-repeat;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 100%;
+            overflow: hidden;
+            margin: 20px;
+        }
+
+        .card header {
+            background: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .card header h1 {
+            margin: 0;
+            font-size: 1.8rem;
+        }
+
+        .profile {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .profile img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 4px solid #333;
+        }
+
+        .info {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .info h3 {
+            margin: 10px 0;
+            font-size: 1.2rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #333;
+            color: #fff;
+        }
+
+        .social-links {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .social-links a {
+            text-decoration: none;
+            font-size: 22px;
+            color: #333;
+            margin: 0 10px;
+        }
+
+        .social-links a img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+
+        .flip-card {
+            background-color: transparent;
+            width: 300px;
+            height: 200px;
+            border: 1px solid #f1f1f1;
+            perspective: 1000px;
+            /* Remove this if you don't want the 3D effect */
+            margin: auto;
+        }
+
+        /* This container is needed to position the front and back side */
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+        }
+
+        /* Do an horizontal flip when you move the mouse over the flip box container */
+        .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        /* Position the front and back side */
+        .flip-card-front,
+        .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            /* Safari */
+            backface-visibility: hidden;
+        }
+
+        /* Style the front side (fallback if image is missing) */
+        .flip-card-front {
+            background-color: #bbb;
+            color: black;
+        }
+
+        /* Style the back side */
+        .flip-card-back {
+            background-color: dodgerblue;
+            color: white;
+            transform: rotateY(180deg);
+        }
+
+        .flip-card-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 
 <body>
-    <h1># Nantipart.github.io</h1>
-    <h3># Nan</h3>
-    <h3># number 04</h3>
-    <h3># IT.5101</h3>
-    <h3># ID.66309010011</h3>
+    <div class="container">
+        <div class="card">
+            <header>
+                <h1>Welcome to Nantipart Portfolio</h1>
+            </header>
+
+            <div class="profile">
+                <img src="img/profile.jpg" alt="Profile Picture">
+            </div>
+            <div class="info">
+                <h1>Nantipart Sukanta</h1>
+                <h3>Nick Name: Nan</h3>
+                <h3>Number: 04</h3>
+                <h3>Course: IT.5101</h3>
+                <h3>ID: 66309010011</h3>
+                <h3>Age: 19</h3>
+            </div>
+
+            <div class="social-links">
+                <a href="https://facebook.com" target="_blank">
+                    <img src="img/facebook.png" alt="Facebook">
+                </a>
+                <a href="https://line.me" target="_blank">
+                    <img src="img/line.png" alt="Line">
+                </a>
+                <a href="https://twitter.com" target="_blank">
+                    <img src="img/twitter.png" alt="Twitter">
+                </a>
+            </div>
+
+            <footer>
+                <p>&copy; 2024 Nantipart. All Rights Reserved.</p>
+            </footer>
+        </div>
+    </div>
+    <div class="flip-card-container">
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="img/logo.png" alt="Avatar" style="width:300px;height:300px;">
+                </div>
+                <div class="flip-card-back">
+                    <h1>ปัจจุบัน</h1>
+                    <p>วิทยาลัยเทคโนโลยีโปลิเทคนิคลานนา </p>
+                    <p>เชียงใหม่</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
